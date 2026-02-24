@@ -148,15 +148,7 @@ export default function AppLayout({ children }) {
 
             {/* Bottom nav (mobile) */}
             <nav className="bottom-nav">
-                {/* Mobile workspace quick-switch */}
-                <button
-                    className={`bottom-nav-item${isPersonal ? " active" : ""}`}
-                    onClick={switchToPersonal}
-                >
-                    <span className="nav-icon">👤</span>
-                    個人
-                </button>
-                {NAV.slice(0, 2).map((n) => (
+                {NAV.map((n) => (
                     <Link
                         key={n.href}
                         href={n.href}
